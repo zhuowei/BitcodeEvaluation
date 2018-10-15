@@ -96,4 +96,14 @@ static NSData* exportOwnExecutable(void (^reportError)(NSString* error)) {
     [self presentViewController:activityController animated:YES completion:nil];
 }
 
+/**
+ This function is't called anywhere: it's included to see how stack canaries work.
+ */
++ (void)worksWithBuffers:(const char*)anotherString {
+    char temp[0x100];
+    // this just stores a string into temp, then prints the string to debugger
+    snprintf(temp, sizeof(temp), "Oh, hi, %s", anotherString);
+    puts(temp);
+}
+
 @end
