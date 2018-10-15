@@ -294,7 +294,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.worthdoingbadly.BitcodeEvaluation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
+				VALID_ARCHS = arm64;
 			};
 			name = Debug;
 		};
@@ -311,7 +312,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.worthdoingbadly.BitcodeEvaluation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
+				VALID_ARCHS = arm64;
 			};
 			name = Release;
 		};
