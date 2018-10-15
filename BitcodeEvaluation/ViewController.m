@@ -23,7 +23,7 @@ static NSData* exportOwnExecutable(void (^reportError)(NSString* error)) {
     // tools, except, of course, this can only dump itself.
     
     // should we raise an error if the executable isn't encrypted?
-    BOOL needsEnc = NO;
+    BOOL needsEnc = YES; // building for real device always injects an encryption header
     // Pointer to this current executable's encryption info
     struct encryption_info_command_64* enc_cmd = nil;
     // find the first load command in this executable
